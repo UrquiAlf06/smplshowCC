@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "3ea17217-65c1-465a-a21f-643520f135fb",
+		"name": "simpleshowCodingChallenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39178374"
+	},
+	"item": [
+		{
+			"name": "get Users by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9194/api/v1/users/1/getById",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9194",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"1",
+						"getById"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Miguel\",\r\n    \"lastName\": \"Urq\",\r\n    \"email\": \"alf@gmail.com\",\r\n    \"password\": \"hola123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9194/api/v1/users/addUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9194",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"addUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get by their Name containing",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9194/api/v1/users/getAllByTheirName?firstName=Mi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9194",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"getAllByTheirName"
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "Mi"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
